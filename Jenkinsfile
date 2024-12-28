@@ -20,7 +20,7 @@ pipeline {
                 '''
             }
         }
-        stage('Deploy'){
+        stage('Test'){
             agent{
                 docker{
                     image 'node:18-alpine'
@@ -34,7 +34,7 @@ pipeline {
                 ''' 
             }
         }
-        stage('Build') {
+       stage('Deploy') {
             agent{
                 docker{
                     image 'node:18-alpine'
